@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
 import { Switch, Route } from 'react-router-dom'
-import Planets from './component/Planets'
+import PlanetShow from './component/PlanetShow'
 import People from './component/People'
+import Planets from './component/Planets'
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
     <Switch>
         <Route exact path='/Planets' component={Planets} />
         <Route exact path='/People' component={People} />
+        <Route exact path="/Planets/:id" render={() => <PlanetShow />} />
     </Switch>
     </>
   );
